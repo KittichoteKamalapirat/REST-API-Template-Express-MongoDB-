@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
 import postsRouter from "./routes/posts.js";
+import usersRouter from "./routes/users.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -16,5 +17,6 @@ db.once("open", () => console.log("connected to Database"));
 app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 app.use("/api/posts", postsRouter);
+app.use("/api/users", usersRouter);
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import Post from "../models/post.js";
+import Post from "../models/Post.js";
 
 const router = Router();
 
@@ -23,7 +23,7 @@ const getPost = async (req, res, next) => {
 router.get("/", async (req, res, next) => {
   try {
     const posts = await Post.find();
-    res.send(posts);
+    res.json(posts);
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: error.mesage });
