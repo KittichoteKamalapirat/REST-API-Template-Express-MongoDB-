@@ -1,0 +1,35 @@
+//get all
+GET http://localhost:5000/api/posts
+### 
+
+//get one
+GET http://localhost:5000/api/posts/61f8da41cf3cab0ab7819f8e
+### 
+
+
+//create
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+
+{
+"title": "title", 
+    "body": "my boasdfasdfdy"
+}
+###
+
+
+//update
+PATCH http://localhost:5000/api/posts/61f8da42cf3cab0ab7819f90
+Content-Type: application/json
+
+{
+"title": "new new title", 
+    "body": "new my boasdfasdfdy"
+}
+### 
+
+
+# delete
+DELETE http://localhost:5000/api/posts/61f8da41cf3cab0ab7819f8e
+
+
